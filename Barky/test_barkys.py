@@ -21,5 +21,12 @@ def test_option_choice_is_invalid(self):
         result = print_options.option_choice_is_valid(choice)   
         self.assertFalse(result)  
 
+def test_get_option_choice(self): 
+        choice = 'W'
+        optionlist = {"(A)": "Add a bookmark"}     
+
+        result = print_options.get_option_choice(choice)   
+        self.assertEqual(result, optionlist)  
+
 if __name__ == "__main__":
      unittest.main()
